@@ -1,0 +1,41 @@
+# WezTerm Claude Setup .gitignore
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Font files (too large for repo, download separately)
+wezterm/fonts/*.ttf
+wezterm/fonts/*.otf
+
+# PowerShell
+*.ps1xml

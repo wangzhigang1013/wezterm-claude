@@ -1,0 +1,260 @@
+# WezTerm + Claude Code Windows 开发环境
+
+> 🚀 Windows 下快速搭建 Claude Code 开发环境的一站式解决方案
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PowerShell 7](https://img.shields.io/badge/PowerShell-7-5391FE)](https://github.com/PowerShell/PowerShell)
+[![WezTerm](https://img.shields.io/badge/WezTerm-Latest-4FC3F7)](https://wezfurlong.org/wezterm/)
+
+## ✨ 特性
+
+- 🎨 **高颜值终端** - Catppuccin Mocha 主题，88% 透明度
+- ⚡ **一键安装** - 自动安装所有依赖和配置
+- 🔧 **模块化配置** - 16 个独立配置模块，易于维护
+- 🤖 **Claude 快捷命令** - `c`、`cc`、`cr` 快速启动
+- 🌐 **跨平台** - 同一套配置支持 Windows/Linux/macOS
+- 📝 **中文字体** - 内置 Maple Mono NF CN 字体
+
+## 📦 包含组件
+
+| 组件 | 版本 | 用途 |
+|------|------|------|
+| **WezTerm** | Latest | 高性能终端模拟器 |
+| **PowerShell 7** | 7.4+ | 现代 Shell |
+| **Claude Code** | Latest | AI 编程助手 |
+| **Maple Mono NF CN** | Latest | 编程字体（带中文和图标） |
+| **Catppuccin Mocha** | - | 终端配色方案 |
+
+## 🚀 快速安装
+
+### 方法一：克隆仓库并运行安装脚本
+
+```powershell
+# 克隆仓库
+git clone https://github.com/your-username/wezterm-claude.git
+cd wezterm-claude
+
+# 以管理员身份运行安装脚本
+.\scripts\install.ps1
+```
+
+### 方法二：手动安装
+
+1. 下载本仓库的 ZIP 文件
+2. 解压到任意目录
+3. 以管理员身份运行 `scripts\install.ps1`
+
+### 安装脚本参数
+
+```powershell
+# 跳过特定组件的安装
+.\scripts\install.ps1 -SkipFont      # 跳过字体安装
+.\scripts\install.ps1 -SkipNode      # 跳过 Node.js 安装
+.\scripts\install.ps1 -SkipGit       # 跳过 Git 安装
+.\scripts\install.ps1 -SkipWezTerm   # 跳过 WezTerm 安装
+.\scripts\install.ps1 -SkipClaude    # 跳过 Claude Code 安装
+```
+
+## 📁 项目结构
+
+```
+wezterm-claude/
+├── README.md                    # 本文件
+├── LICENSE                      # MIT 许可证
+├── SETUP-GUIDE.md              # 详细安装指南
+├── wezterm/                    # WezTerm 配置
+│   ├── wezterm.lua             # 入口文件
+│   ├── config/                 # 配置模块
+│   │   ├── appearance.lua      # 外观设置
+│   │   ├── tab_bar.lua         # 标签栏
+│   │   ├── cursor.lua          # 光标
+│   │   ├── window.lua          # 窗口
+│   │   ├── fonts.lua           # 字体
+│   │   ├── shell.lua           # Shell
+│   │   ├── keybindings.lua     # 快捷键
+│   │   ├── mouse.lua           # 鼠标
+│   │   ├── launch_menu.lua     # 启动菜单
+│   │   ├── events.lua          # 事件
+│   │   ├── advanced.lua        # 高级设置
+│   │   ├── hyperlink.lua       # 超链接
+│   │   ├── constants.lua       # 常量
+│   │   └── utils.lua           # 工具函数
+│   └── fonts/                  # 字体文件
+├── powershell/                 # PowerShell 配置
+│   └── Microsoft.PowerShell_profile.ps1
+└── scripts/                    # 安装脚本
+    ├── install.ps1             # 一键安装脚本
+    └── test-install.ps1        # 环境测试脚本
+```
+
+## ⌨️ 快捷键
+
+### WezTerm 快捷键
+
+| 快捷键 | 功能 |
+|--------|------|
+| `Ctrl+T` | 新建标签页 |
+| `Ctrl+W` | 关闭当前窗格 |
+| `Ctrl+Shift+W` | 关闭整个标签页 |
+| `Ctrl+Tab` | 下一个标签页 |
+| `Ctrl+Alt+\` | 垂直分割 |
+| `Ctrl+Alt+-` | 水平分割 |
+| `Alt+方向键` | 切换窗格焦点 |
+| `Ctrl+Shift+P` | 启动菜单 |
+| `Ctrl+Shift+C` | 复制 |
+| `Ctrl+Shift+V` | 粘贴 |
+| `Ctrl+V` | 粘贴（支持图片） |
+| `Ctrl+Shift+S` | 切换配色方案 |
+| `F11` | 全屏切换 |
+
+### Claude 快捷命令
+
+| 命令 | 功能 |
+|------|------|
+| `c` | 启动 Claude（全自动） |
+| `cc` | 继续上次会话（全自动） |
+| `cr` | 选择会话恢复（全自动） |
+
+### PowerShell 别名
+
+| 命令 | 功能 |
+|------|------|
+| `g` | git |
+| `v` | nvim |
+| `ll` | 列出文件 |
+
+## 🎨 配色方案
+
+当前使用 **Catppuccin Mocha** 主题：
+
+| 颜色 | 色值 | 用途 |
+|------|------|------|
+| 背景 | `#11111b` | 终端背景 |
+| 高亮 | `#cba6f7` | 紫色高亮 |
+| 文字 | `cdd6f4` | 主要文字 |
+| 注释 | `#6c7086` | 次要文字 |
+
+### 切换配色方案
+
+按 `Ctrl+Shift+S` 可以在 10 种内置配色方案之间切换：
+
+1. Catppuccin Mocha (默认)
+2. Catppuccin Latte
+3. Tokyo Night
+4. Ayu Mirage
+5. One Dark (Gogh)
+6. Dracula
+7. Gruvbox Dark
+8. Nord
+9. Solarized Dark
+10. Rose Pine
+
+## 🔧 自定义配置
+
+### 修改字体
+
+编辑 `wezterm/config/fonts.lua`：
+
+```lua
+config.font = wezterm.font("你的字体名称")
+config.font_size = 14.0  -- 修改字体大小
+```
+
+### 修改配色
+
+编辑 `wezterm/config/constants.lua`：
+
+```lua
+M.DEFAULT_COLOR_SCHEME = "Tokyo Night"  -- 修改默认配色
+```
+
+### 修改快捷键
+
+编辑 `wezterm/config/keybindings.lua`，参考 [WezTerm 快捷键文档](https://wezfurlong.org/wezterm/config/keys.html)。
+
+### 添加 Claude 命令
+
+编辑 `powershell/Microsoft.PowerShell_profile.ps1`：
+
+```powershell
+function mycommand { claude --your-flags @args }
+```
+
+## 🐛 故障排除
+
+### Claude Code 无法启动
+
+```powershell
+# 检查 Node.js
+node --version
+
+# 重新安装 Claude Code
+npm uninstall -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/claude-code
+```
+
+### WezTerm 配置不生效
+
+```powershell
+# 检查配置文件
+ls "$env:USERPROFILE\.config\wezterm\wezterm.lua"
+
+# 重启 WezTerm 或按 Ctrl+Shift+R 重载
+```
+
+### 字体显示异常
+
+1. 确认字体已安装到系统
+2. 检查 `config/fonts.lua` 中的字体名称
+3. 按 `Ctrl+Shift+S` 切换配色方案
+
+### PowerShell Profile 不生效
+
+```powershell
+# 设置执行策略
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# 重新加载
+. $PROFILE
+```
+
+## 📝 更新日志
+
+### v1.0.0 (2025-06-18)
+
+- ✨ 初始版本发布
+- 🎨 Catppuccin Mocha 主题
+- ⚡ 一键安装脚本
+- 🤖 Claude 快捷命令
+- 📝 完整安装文档
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本仓库
+2. 创建你的分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的修改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+
+## 🙏 致谢
+
+- [WezTerm](https://wezfurlong.org/wezterm/) - 高性能终端模拟器
+- [Claude Code](https://docs.anthropic.com/en/docs/claude-code) - AI 编程助手
+- [Catppuccin](https://catppuccin.com/) - 配色方案
+- [Maple Mono](https://github.com/subframe7536/maple-font) - 编程字体
+- [PowerShell](https://github.com/PowerShell/PowerShell) - 现代 Shell
+
+## 📧 联系方式
+
+- GitHub: [@your-username](https://github.com/your-username)
+- Email: your-email@example.com
+
+---
+
+⭐ 如果这个项目对你有帮助，请给个 Star！
