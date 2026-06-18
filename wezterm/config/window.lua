@@ -20,7 +20,7 @@ function M.apply(config)
 
     -- 标题栏样式（Catppuccin 风格）
     config.window_frame = {
-        font = wezterm.font("Maple Mono NF CN", { weight = "Bold" }),
+        font = wezterm.font("Cascadia Code", { weight = "Bold" }),
         font_size = 9.0,
         active_titlebar_bg = "#11111b",
         inactive_titlebar_bg = "#11111b",
