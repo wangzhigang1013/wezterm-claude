@@ -22,7 +22,8 @@
 | **WezTerm** | Latest | 高性能终端模拟器 |
 | **PowerShell 7** | 7.4+ | 现代 Shell |
 | **Claude Code** | Latest | AI 编程助手 |
-| **Maple Mono NF CN** | Latest | 编程字体（带中文和图标） |
+| **ccswitch** | Latest | Claude Code 配置切换工具 |
+| **Cascadia Code** | Windows 自带 | 编程字体 |
 | **Catppuccin Mocha** | - | 终端配色方案 |
 
 ## 🚀 快速安装
@@ -31,7 +32,7 @@
 
 ```powershell
 # 克隆仓库
-git clone https://github.com/your-username/wezterm-claude.git
+git clone https://github.com/wangzhigang1013/wezterm-claude.git
 cd wezterm-claude
 
 # 以管理员身份运行安装脚本
@@ -114,6 +115,18 @@ wezterm-claude/
 | `c` | 启动 Claude（全自动） |
 | `cc` | 继续上次会话（全自动） |
 | `cr` | 选择会话恢复（全自动） |
+
+### ccswitch 命令
+
+ccswitch 是 Claude Code 配置切换工具，用于管理多个 API 配置。
+
+| 命令 | 功能 |
+|------|------|
+| `ccswitch` | 启动交互式配置切换 |
+| `ccswitch list` | 列出所有配置 |
+| `ccswitch switch` | 切换到指定配置 |
+| `ccswitch add` | 添加新配置 |
+| `ccswitch remove` | 删除配置 |
 
 ### PowerShell 别名
 
@@ -246,13 +259,14 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 - [WezTerm](https://wezfurlong.org/wezterm/) - 高性能终端模拟器
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) - AI 编程助手
+- [ccswitch](https://github.com/TomokiMatsubuchi/ccswitch) - Claude Code 配置切换工具
 - [Catppuccin](https://catppuccin.com/) - 配色方案
-- [Maple Mono](https://github.com/subframe7536/maple-font) - 编程字体
+- [Cascadia Code](https://github.com/microsoft/cascadia-code) - 编程字体
 - [PowerShell](https://github.com/PowerShell/PowerShell) - 现代 Shell
 
 ## 📧 联系方式
 
-- GitHub: [@your-username](https://github.com/your-username)
+- GitHub: [@wangzhigang1013](https://github.com/wangzhigang1013)
 - Email: your-email@example.com
 
 ---

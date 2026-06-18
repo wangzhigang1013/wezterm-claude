@@ -59,7 +59,7 @@ function Test-Command {
 }
 
 # ── 主安装流程 ──────────────────────────────────────────
-$TotalSteps = 7
+$TotalSteps = 8
 $CurrentStep = 0
 
 Write-Host "`n" -NoNewline
@@ -198,6 +198,23 @@ if ($SkipClaude) {
     }
 }
 
+# ── 8. 安装 ccswitch ──────────────────────────────────────────
+$CurrentStep++
+Write-Step "安装 ccswitch (Claude Code 配置切换工具)" $CurrentStep $TotalSteps
+
+if (Test-Command "ccswitch") {
+    $ccswitchVersion = ccswitch --version 2>&1
+    Write-Success "ccswitch 已安装: $ccswitchVersion"
+} else {
+    Write-Info "正在安装 ccswitch..."
+    npm install -g ccswitch
+    if ($LASTEXITCODE -eq 0) {
+        Write-Success "ccswitch 安装成功"
+    } else {
+        Write-Error "ccswitch 安装失败，请手动安装: npm install -g ccswitch"
+    }
+}
+
 # ── 安装完成 ──────────────────────────────────────────────
 Write-Host "`n" -NoNewline
 Write-Host "╔═══════════════════════════════════════════════════════════╗" -ForegroundColor Green
@@ -211,6 +228,7 @@ Write-Host "  ✓ Git" -ForegroundColor Green
 Write-Host "  ✓ PowerShell 7" -ForegroundColor Green
 Write-Host "  ✓ WezTerm 终端" -ForegroundColor Green
 Write-Host "  ✓ Claude Code" -ForegroundColor Green
+Write-Host "  ✓ ccswitch (配置切换)" -ForegroundColor Green
 Write-Host "  ✓ WezTerm 配置" -ForegroundColor Green
 Write-Host "  ✓ PowerShell Profile" -ForegroundColor Green
 
