@@ -40,6 +40,37 @@
 
 注册后获取订阅链接，导入到 Clash Verge 即可使用。
 
+### 免费节点资源（GitHub）
+
+> ⚠️ **注意**：免费节点不稳定、速度慢，仅适合临时使用。长期使用建议购买付费机场。
+
+| 项目 | 链接 | 说明 |
+|------|------|------|
+| **proxypool** | [GitHub](https://github.com/snakem982/proxypool) | 免费节点池，每日更新 |
+| **free-node** | [GitHub](https://github.com/HakurouKen/free-node) | V2Ray 免费节点集合 |
+| **Mirza** | [GitHub](https://github.com/resasanian/Mirza) | 每日更新免费节点 |
+| **VPN-free** | [GitHub](https://github.com/SANYIMOE/VPN-free) | 免费 VPN 节点 |
+| **Free** | [GitHub](https://github.com/halfaaa/Free) | 免费节点，每日更新 |
+
+**使用方法：**
+
+1. 点击上面的 GitHub 链接
+2. 找到订阅链接（通常是 `.txt` 或 `.yaml` 文件）
+3. 复制订阅链接
+4. 在 Clash Verge 中添加订阅
+
+**免费订阅链接汇总（直接复制到 Clash）：**
+
+```
+# 以下链接可能随时失效，建议定期更新
+# 来源：GitHub 开源项目
+
+https://raw.githubusercontent.com/snakem982/proxypool/main/proxies/sub.txt
+https://raw.githubusercontent.com/HakurouKen/free-node/main/collect.txt
+```
+
+> 💡 将以上链接添加到 Clash Verge 的「订阅」中即可使用。
+
 ### 推荐代理工具：Clash Verge Rev
 
 **下载地址：**
