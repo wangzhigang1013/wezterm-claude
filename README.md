@@ -26,7 +26,61 @@
 | **Cascadia Code** | Windows 自带 | 编程字体 |
 | **Catppuccin Mocha** | - | 终端配色方案 |
 
+## 🌐 网络代理（必需）
+
+> ⚠️ **重要**：由于网络限制，安装 Node.js、Claude Code 等工具时需要代理。请先配置好代理再进行安装。
+
+### 推荐代理工具：Clash Verge Rev
+
+**下载地址：**
+
+| 版本 | 链接 | 说明 |
+|------|------|------|
+| **Clash Verge Rev** | [GitHub Releases](https://github.com/clash-verge-rev/clash-verge-rev/releases) | 推荐，轻量高效 |
+| **Clash for Windows** | [GitHub Releases](https://github.com/Fndroid/clash_for_windows_pkg/releases) | 经典版本（已停更） |
+| **v2rayN** | [GitHub Releases](https://github.com/2dust/v2rayN/releases) | 备选方案 |
+
+**安装步骤：**
+
+1. 下载 `Clash.Verge_x.x.x_x64-setup.exe`（Windows 64位）
+2. 安装并启动
+3. 导入你的订阅链接或配置文件
+4. 开启系统代理
+
+**配置终端代理：**
+
+```powershell
+# 设置代理（端口根据你的 Clash 配置修改，通常是 7890）
+$env:HTTP_PROXY = "http://127.0.0.1:7890"
+$env:HTTPS_PROXY = "http://127.0.0.1:7890"
+
+# 验证代理
+curl https://www.google.com
+```
+
+**永久设置代理（添加到 PowerShell Profile）：**
+
+```powershell
+# 在 ~/. Documents/PowerShell/Microsoft.PowerShell_profile.ps1 中添加
+$env:HTTP_PROXY = "http://127.0.0.1:7890"
+$env:HTTPS_PROXY = "http://127.0.0.1:7890"
+```
+
+**npm 设置代理：**
+
+```powershell
+npm config set proxy http://127.0.0.1:7890
+npm config set https-proxy http://127.0.0.1:7890
+```
+
+---
+
 ## 🚀 快速安装
+
+### 前置条件
+
+1. ✅ 安装并启动代理工具（Clash Verge 等）
+2. ✅ 确认代理可用（能访问 Google/GitHub）
 
 ### 方法一：克隆仓库并运行安装脚本
 
