@@ -359,11 +359,6 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 - [Cascadia Code](https://github.com/microsoft/cascadia-code) - 编程字体
 - [PowerShell](https://github.com/PowerShell/PowerShell) - 现代 Shell
 
-## 📧 联系方式
-
-- GitHub: [@wangzhigang1013](https://github.com/wangzhigang1013)
-- Email: your-email@example.com
-
 ---
 
 ⭐ 如果这个项目对你有帮助，请给个 Star！
